@@ -1,0 +1,282 @@
+/*********global*********/
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+}
+html,body,content{
+    height:100%;
+    min-height:800px;
+}
+/*******容器*********/
+body{
+    background:url(../img/bg.jpg);
+}
+.content{
+    width:600px;
+    height:600px;
+    margin:50px auto 0;
+    position: relative;
+}
+/*************云朵****************/
+.cloud-bar{
+    width:230px;
+    height:250px;
+
+    position:absolute;
+    left:50%;
+    top:45%;
+    margin-left:-120px;
+    margin-top:-120px;
+}
+.cloud-bar>div{
+    border:8px solid #fff;
+    position:absolute;
+    background:#000;
+
+}
+/************中间的云*********/
+.cloud-bar .middle{
+    width:150px;
+    height:150px;
+    top:50%;left:50%;
+    margin-left:-75px;
+    margin-top:-75px;
+    transform:rotate(45deg);
+    z-index: 1;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+/******左边的云朵********/
+.cloud-bar .l{
+    width:100px;
+    height:100px;
+    z-index:100;
+    top:50%;left:50%;
+    margin-left:-114px;
+    margin-top:-14px;
+    transform:rotate(-46deg);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+/********右边的云朵*********/
+.cloud-bar .r{
+    width:90px;
+    height:90px;
+    z-index:100;
+    top:50%;left:50%;
+    margin-left:22px;
+    margin-top:-3px;
+    transform: rotate(135deg);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+/********雨滴********/
+.cloud-bar .rain{
+    border:none;
+    width:90px;
+    height:80px;
+    left:50%;
+    top:71%;
+   margin-left:-42px;
+    z-index: 100;
+}
+.rain>div{
+    width:25px;
+    height:25px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background:#0cf;
+    transform: rotate(65deg);
+    position:absolute;
+}
+
+.rain .rain-d1{
+    top:0;left:50%;
+    margin-left:-12px;
+    -webkit-animation:rain 2s cubic-bezier(0.42, 0, 0.63, 0.37) infinite;
+    -o-animation:rain 2s cubic-bezier(0.42, 0, 0.63, 0.37) infinite;
+    animation:rain 2s cubic-bezier(0.42, 0, 0.63, 0.37) infinite;
+}
+
+.rain .rain-d2{
+    top:20px; left:0;
+    -webkit-animation:rain 2s cubic-bezier(0.42, 0, 0.63, 0.37) infinite;
+    -o-animation:rain 2s cubic-bezier(0.42, 0, 0.63, 0.37) infinite;
+    animation:rain 2s cubic-bezier(0.42, 0, 0.63, 0.37) infinite;
+}
+/*********水滴动画1 +2************/
+@keyframes rain {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+
+}
+@-webkit-keyframes rain {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+
+}
+@-moz-keyframes  rain{
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-o-keyframes rain {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-ms-keyframes rain {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+.rain .rain-d3{
+    top:25px; right:0;
+    -webkit-animation:rain3 2s ease-in-out 3s infinite;
+    -o-animation:rain3 2s ease-in-out 3s infinite;
+    animation:rain3 2s ease-in-out 3s infinite;
+}
+/*********水滴动画3************/
+@-webkit-keyframes rain3 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-moz-keyframes rain3 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-o-keyframes rain3 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@keyframes rain3 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+/**************3end**************/
+.rain .rain-d4{
+    bottom:5px; left:50%;
+    margin-left:-21px;
+    -webkit-animation:rain4 4s ease-in-out 2s infinite;
+    -o-animation:rain4 4s ease-in-out 2s infinite;
+    animation:rain4 4s ease-in-out 2s infinite;
+}
+/*********水滴动画4************/
+@keyframes rain4 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-webkit-keyframes rain4 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-moz-keyframes rain4 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+@-o-keyframes rain4 {
+    0%{background:#0cf;opacity:1;}
+    50%{background:#aaa;opacity:0.3;}
+    100%{background:#0cf;opacity:1;}
+}
+/*********云朵end***********/
+/*********太阳*********/
+.sun-bar{
+    width:270px;
+    height:270px;
+    position: absolute;
+    top:37%;
+    left:61%;
+    margin-left:-135px;
+    margin-top:-135px;
+}
+.sun-bar .cir{
+    width:140px;
+    height:140px;
+    border:8px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left:50%; top:50%;
+    margin-left:-70px;
+    margin-top:-70px;
+
+}
+/**********光芒***********/
+/*******光芒的动画******/
+.sunshine{
+
+    height:100%;
+    -webkit-animation:shine 4s linear infinite;
+    -o-animation:shine 4s linear infinite;
+    animation:shine 4s linear infinite;
+}
+@keyframes shine {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(360deg);}
+}
+@-webkit-keyframes shine {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(360deg);}
+}
+@-moz-keyframes shine {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(360deg);}
+}
+@-o-keyframes shine {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(360deg);}
+}
+/*********动画end********/
+.sunshine>div{
+    width:10px;
+    height:40px;
+    background:#fff;
+    position: absolute;
+    top:0; left:50%;
+    margin-left:-5px;
+}
+.sunshine div:nth-child(2){
+    transform-origin:50% 135px;
+    transform:rotate(45deg);
+}
+.sunshine div:nth-child(3){
+    transform-origin:50% 135px;
+    transform:rotate(90deg);
+}
+.sunshine div:nth-child(4){
+    transform-origin:50% 135px;
+    transform:rotate(135deg);
+}
+.sunshine div:nth-child(5){
+    transform-origin:50% 135px;
+    transform:rotate(180deg);
+}
+.sunshine div:nth-child(6){
+    transform-origin:50% 135px;
+    transform:rotate(225deg);
+}
+.sunshine div:nth-child(7){
+    transform-origin:50% 135px;
+    transform:rotate(270deg);
+}
+.sunshine div:nth-child(8){
+    transform-origin:50% 135px;
+    transform:rotate(315deg);
+}
